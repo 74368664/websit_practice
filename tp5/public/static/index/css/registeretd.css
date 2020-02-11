@@ -1,0 +1,42 @@
+	
+#re_main{
+	width: 100%;
+	height: 1000px;
+	background-image: url(../image/registered.jpg);
+	position: absolute;
+	background-attachment: fixed;
+	/* background-size: cover; */
+	background-position: top left;
+	animation: mymove 10s infinite;/* css3动画属性 */
+	-webkit-animation:mymove 10s infinite;
+	
+	
+	margin: 0;
+
+}
+@-webkit-keyframes mymove{
+	50%{background-position: bottom right;}
+}
+	table{
+				border-color: #a1e9ff;
+				border-width: 3px;
+				margin: auto;
+				color: #ded9ff;
+				/* text-shadow:1px 2px greenyellow; */
+				font-weight: bold;
+				font-size: 20px;
+				margin-top: 50px;
+				/*height: 300px;*/
+			}
+			td{
+				text-align:right;
+				height: 20px;
+			}
+				tr{
+					text-align:right;
+					height: 20px;
+				}
+			input{
+				height: 20px;
+				align:left;
+			}

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>网站</title>
+		<link rel="stylesheet" href="__PUBLIC__/css/index_main.css" type="text/css" />
+
+<script>
+
+
+</script>
+		<style>
+			.right1{
+				/*background-color: #4c79ce;*/
+				margin-left: 0px;
+				border-width: 1px;
+
+				border-bottom-style: solid;
+			}
+			#right{
+				/*background-color: #ce8c7f;*/
+				margin-left: -100px;
+			}
+			.fan_photo{
+				width: 200px;
+				height: 280px;
+				margin-top: -50px;
+			}
+			textarea{
+				height: 200px;
+				/*margin-left: ;*/
+				width: 500px;
+				resize:none;
+				overflow-y:hidden;
+				border-width: 0px;
+			}
+			.font_r{
+				width: 360px;
+				height: 220px;
+				margin-left: 240px;
+				overflow: hidden;
+			}
+#top_top1{
+	background-color: #b3cec3;
+}
+			#top{
+				/*background-color: #e6d6ff;*/
+			}
+
+
+		</style>
+		<?php
+		if(!session('username')) {
+
+		$check=0;
+		$name="您还未登录";
+		}
+		else{
+		$check=1;
+			$name="欢迎用户:".session('username');
+		}
+
+		?>
+</head>
+
+<body>
+<div id="main">
+<!--	<embed height="50" width="100" src="./media/bgm1.mp3" loop="true" hidden="true">-->
+	<div id="top">
+
+		<div id="top_mleft">
+			<img src="__PUBLIC__/image/logo_index.png" style="border-radius:3%" width="300px" height="220px" alt="logo">
+		</div>
+		<div id="top_top">
+				<p>
+			<input type="hidden" style="background-color: transparent;" value="{$check}" id="check">
+			<input type="text" style="background-color: transparent; border-width: 0; color: #4c79ce" value="{$name}" id="nam">
+			<a href="{:url('Login/unlogin')}">
+			<input type="button" style="background-color: transparent; width: 200px" value="退出登录" id="unlogin">
+			</a>
+			<a href="{:url('Login/login')}">
+			<input type="button" style="background-color: transparent; width: 70px;height: 30px" value="登录" id="login">
+			</a>
+			<a href="{:url('Login/registeretd')}">
+			<input type="button" style="background-color: transparent;width: 70px;height: 30px"  value="注册" id="reg">
+			</a>
+			</p>
+		</div>
+		<div id="top_middle">
+
+
+
+			<div id="top_mright">
+<!--				<div id="top_mm">-->
+<!--						<form ><p ><input type="text" size="40%" style="height:40px;float: right; margin-right:17%;" placeholder="搜索"/>-->
+<!--						 <input type="button" name="搜索" style="width:45px;height:45px;float: right; margin-right:5%;margin-top:-12% ;" value="搜索"/></p>-->
+<!--				</div>-->
+			</div>
+		</div>
+		<div id="top_top1">
+
+			<div class="top_a">
+				<a href="{:url('Login/indexMain')}"   >主页</a>
+			</div>
+			<div class="top_a">
+				<a href="{:url('wutong/Page/article')}"  >文章</a>
+			</div>
+			<div class="top_a">
+				<a href="{:url('wutong/Page/note')}" >日记</a>
+			</div>
+			<div class="top_a">
+					<a href="{:url('wutong/Page/Message')}" >留言簿</a>
+			</div>
+			<div class="top_a">
+				<a href="{:url('wutong/Page/Fan_Opera')}" >番剧推荐</a></p>
+			</div>
+
+			<div id="ha">
+			</div>
+		</div>
+	</div>
+	<div id="middle">
+		<div id="left">
+			<div id="left_top">
+			</div>
+			<div id="left_top1">
+			<div id="left_top2"></div>
+			<div id="head_photo"><img src="__PUBLIC__/image/head_photo.png" width="100px;"></div>
+			<p align="center" style="font-size:30px;font-weight:bold; margin-top:60px"></p>
+			<p align="center"><strong>简介：</strong>kufufu</p>
+
+				<p align="center">用户：{$people_count}人</p>
+		</div>
+	</div>
+		<div id="right_w">
+		<div id="right">
+
+			{volist name='fan' id='infor'}
+			<div class="right1">
+
+				<p align="center" class="title">
+				<a href="{:url('wutong/Page/Fan_Opera')}" title="{$infor.title}">{$infor.title}
+				</p>
+				<img src="__PUBLIC__/image/fan_o/{$infor.photo}" class="fan_photo" style="float:left">
+
+				<div class="font_r" >{$infor.content}
+				</div>
+
+
+
+
+			</div></a>{/volist}
+			{volist name='article' id='infor'}
+			<div class="right1">
+
+				<p align="center" class="title">
+					<a href="{:url('wutong/Page/article')}" title="{$infor.title}">{$infor.title}
+				</p>
+
+				<div class="fan_photo" style="float:left;font-size: 20px">文章推荐</div>
+				<div class="font_r" >{$infor.content}
+				</div>
+
+			</div></a>{/volist}
+		</div>
+
+
+	</div>
+
+	</div>
+			<div id="bottom">
+				<hr/>
+	    	   <p align="center">版权所属：桐  |  版权号 xxxxx-xxxxx-xxxxx
+			   <a href="{:url('AdminLogin/Admin_Login')}"><span> 管理员登录</span></a> <p>
+			</div>
+</div>
+<script>
+
+
+	var check=document.getElementById('check').value;
+	console.log(check);
+	var log=document.getElementById('login');
+	var unlog=document.getElementById('unlogin');
+	var reg=document.getElementById('reg');
+	var inf=document.getElementById('inf');
+	if(check==0){
+		reg.style.display="";//显
+		log.style.display="";//显
+		unlog.style.display="none";//显
+
+	}
+	else if(check==1){
+
+		console.log('check');
+		reg.style.display="none";//隐藏
+		log.style.display="none";//隐藏
+		unlog.style.display="";//隐藏
+
+	}
+
+</script>
+</body>
+</html>

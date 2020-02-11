@@ -1,0 +1,27 @@
+a:hover{
+    color:#FFD700;
+
+}
+
+a:link{
+    color:plum;
+}
+a:visited{
+    color:palegreen;
+}
+#o_left_top2{
+    background-image: url(../image/2.jpg);
+    background-size: cover;
+    opacity:0.7;
+}
+
+/* #play{
+    width: 70px;
+    height: 70px;
+    position: absolute;
+
+}
+
+@-webkit-keyframes mymoveimg{
+    border-width: 5px;
+} */

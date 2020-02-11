@@ -1,0 +1,117 @@
+
+
+#o_main{
+    width: 100%;
+    height: 920px;
+    background-color: #D8BFD8;
+    background-image: url(../image/1010.jpg);
+    background-size: cover;
+    background-attachment:fixed;
+
+}
+.o_right1{
+    width: 600px;
+    height: 300px;
+    /* border: 2px solid #D3D3D3; */
+    float: right;
+    background-color: #4288ce;
+    /*background-color:rgba(255 255 235 0.8);*/
+    margin-top: 30px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    /*background-color: transparent;*/
+}
+.o_right{
+    width: 100%;
+    height:100%;
+    float: right;
+    border: none;
+
+    margin-left: 300px;
+    overflow: hidden;
+    /* background-color: #ADD8E6; */
+    margin-top:10px;
+    overflow-x:hidden;
+    overflow-y:scroll;
+    background-color: #4288ce;
+}
+#o_right3_f{
+    width:300px;
+    height: 300px;
+    border:0;
+    margin-bottom: 30px;
+    float: left;
+    border-bottom: dashed;
+    border-bottom-color:silver;
+    border-bottom-width: 1px;
+    background-color: #4288ce;
+}
+textarea{
+    background-color: transparent;
+    color: gainsboro;
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    border-width: 3px;
+    border-color: silver;
+}
+a:hover{
+    background-image:linear-gradient(to bottom,#E0FFFF,#8A2BE2);
+    background-size:contain;
+    color:#000000;
+
+}
+
+a:link{
+    color:#808080;
+}
+a:visited{
+    color:cadetblue;
+}
+iframe{
+    width:400px;
+    height:600px;
+    position: fixed;
+    /* 	scrolling:no; */
+    border:0;
+
+}
+input{
+    background-image: url(../image/1.jpg);
+    position: absolute;
+    top:230px;
+
+    margin-left: 600px;
+
+}
+
+.speak{
+    width: 700px;
+    height:100%;
+
+    position: absolute;
+    margin-top: 270px;
+    margin-left: 370px;
+}
+
+#speak textarea{
+    height: 100%;
+    color: #000000;
+    border-radius: 7%;
+    border: 0;
+
+}
+#speak img{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border:2px solid #E6E6FA;
+    margin-top: 20px;
+    animation:mymove 10s infinite;
+}
+@-ms-keyframes mymove{
+    50%{transform: 360deg;}
+}
+#o_main{
+    background-image:url(../image/999.jpeg);
+}
